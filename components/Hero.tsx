@@ -24,7 +24,7 @@ const Hero = ({ pageInfo }: Props) => {
         transition={{ duration: 1.2 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        className="relative rounded-full h-32 w-32 mx-auto object-cover"
+        className="relative rounded-full h-32 w-32  mx-auto object-cover"
         src={urlFor(pageInfo?.heroImage).url()}
         alt="avatar"
       />

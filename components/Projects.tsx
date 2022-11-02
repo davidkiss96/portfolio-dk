@@ -15,7 +15,7 @@ const Projects = ({ projects }: Props) => {
       transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Projects</h3>
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl mb-15">Projects</h3>
 
       <div className="w-full relative flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, index) => (
@@ -30,9 +30,10 @@ const Projects = ({ projects }: Props) => {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt=""
+              className="max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl lg:mt-20"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+              <h4 className="text-2xl sm:text-4xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case Study {index + 1} of {projects.length}:
                 </span>{" "}

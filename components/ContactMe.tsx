@@ -31,40 +31,46 @@ const ContactMe = ({ pageInfo }: Props) => {
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl">Contact</h3>
 
-      <div className="flex flex-col space-y-10 mt-5">
-        <h4 className="text-xl sm:text-4xl font-semibold text-center">
+      <div className="flex flex-col space-y-10 mt-20">
+        <h4 className="text-md sm:text-4xl font-semibold text-center">
           I have got just what you need.
           <span className="underline decoration-[#F7AB0A]/50"> Lets Talk.</span>
         </h4>
 
         <div className="space-y-5 my-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo.phoneNumber}</p>
+            <PhoneIcon className="text-[#F7AB0A] h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
+            <p className="text-xl sm:text-2xl">{pageInfo.phoneNumber}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <a className="text-2xl" href={`mailto:${pageInfo.email}`}>
+            <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
+            <a className="text-xl sm:text-2xl" href={`mailto:${pageInfo.email}`}>
               {pageInfo.email}
             </a>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo.address}</p>
+            <MapPinIcon className="text-[#F7AB0A] h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
+            <p className="text-xl sm:text-2xl">{pageInfo.address}</p>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
-          <div className="flex space-x-2">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="grid sm:flex sm:flex-col space-y-2 w-screen px-5 sm:w-fit sm:mx-auto"
+        >
+          <div className="grid sm:flex sm:space-x-2 space-y-2 sm:space-y-0">
             <input {...register("name")} placeholder="Name" className="contactInput" type="text" />
             <input {...register("email")} placeholder="Email" className="contactInput" type="email" />
           </div>
           <input {...register("subject")} placeholder="Subject" className="contactInput" type="text" />
 
           <textarea {...register("message")} placeholder="Message" className="contactInput h-36" />
-          <button className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg" type="submit">
+          <button
+            className="bg-[#F7AB0A] py-3 px-5 sm:px-10 sm:py-5 rounded-md text-black font-bold text-lg"
+            type="submit"
+          >
             Submit
           </button>
         </form>
