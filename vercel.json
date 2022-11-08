@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/sanity/(.*)",
+      "destination": "/sanity/dist/index.html"
+    }
+  ]
+}

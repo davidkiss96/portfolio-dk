@@ -1,23 +1,17 @@
 {
   "root": true,
   "project": {
-    "name": "portfolio-2.0"
+    "name": "dk-portfolio-studio",
+    "basePath": "/studio"
   },
   "api": {
     "projectId": "rn8jisex",
     "dataset": "production"
   },
-  "plugins": [
-    "@sanity/base",
-    "@sanity/default-layout",
-    "@sanity/default-login",
-    "@sanity/desk-tool"
-  ],
+  "plugins": ["@sanity/base", "@sanity/default-layout", "@sanity/default-login", "@sanity/desk-tool"],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
