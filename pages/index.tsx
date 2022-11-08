@@ -1,4 +1,4 @@
-import type { GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import About from "../components/About";
@@ -57,13 +57,13 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <ContactMe pageInfo={pageInfo} />
       </section>
 
-      <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
+      <footer className="sticky bottom-5 w-full cursor-pointer">
+        <div className="flex items-center justify-center">
+          <Link href="#hero">
             <ArrowUpCircleIcon className="h-10 w-10 rounded-full bg-[#F7AB0A] filter grayscale hover:grayscale-0 cursor-pointer" />
-          </div>
-        </footer>
-      </Link>
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 };
