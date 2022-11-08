@@ -57,13 +57,13 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <ContactMe pageInfo={pageInfo} />
       </section>
 
-      <footer className="sticky bottom-5 w-full cursor-pointer">
-        <div className="flex items-center justify-center">
-          <Link href="#hero">
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
             <ArrowUpCircleIcon className="h-10 w-10 rounded-full bg-[#F7AB0A] filter grayscale hover:grayscale-0 cursor-pointer" />
-          </Link>
-        </div>
-      </footer>
+          </div>
+        </footer>
+      </Link>
     </div>
   );
 };

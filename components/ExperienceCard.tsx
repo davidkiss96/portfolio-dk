@@ -22,16 +22,7 @@ const ExperienceCard = ({ experience }: Props) => {
       <div className="px-0 md:px-10">
         <h4 className="text-2xl sm:text-3xl font-light">{experience?.jobTitle}</h4>
         <p className="font-bold text-xl  mt-1">{experience?.company}</p>
-        <div className="flex space-x-2 my-2">
-          {experience?.technologies?.map((technology) => (
-            <motion.img
-              key={technology?._id}
-              className="h-5 w-5 sm:h-10 sm:w-10 rounded-full "
-              src={urlFor(technology?.image).url()}
-              alt=""
-            />
-          ))}
-        </div>
+
         <p className="uppercase py-5 text-gray-300">
           {new Date(experience.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere ? "Present" : new Date(experience.dateEnded).toDateString()}

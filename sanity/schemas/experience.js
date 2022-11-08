@@ -37,12 +37,6 @@ export default {
       type: "boolean",
     },
     {
-      name: "technologies",
-      title: "Technologies",
-      type: "array",
-      of: [{ type: "reference", to: { type: "skill" } }],
-    },
-    {
       name: "points",
       title: "Points",
       type: "array",
