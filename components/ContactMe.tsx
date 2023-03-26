@@ -29,7 +29,7 @@ const ContactMe = ({ pageInfo }: Props) => {
       transition={{ duration: 1.5 }}
       className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl">Contact</h3>
+      <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl">Contact</h3>
 
       <div className="flex flex-col space-y-10 mt-20">
         <h4 className="text-md sm:text-4xl font-semibold text-center">
@@ -40,19 +40,19 @@ const ContactMe = ({ pageInfo }: Props) => {
         <div className="space-y-5 my-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
-            <p className="text-xl sm:text-2xl">{pageInfo.phoneNumber}</p>
+            <p className="text-lg sm:text-xl">{pageInfo.phoneNumber}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
-            <a className="text-xl sm:text-2xl" href={`mailto:${pageInfo.email}`}>
+            <a className="text-lg sm:text-xl" href={`mailto:${pageInfo.email}`}>
               {pageInfo.email}
             </a>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
-            <p className="text-xl sm:text-2xl">{pageInfo.address}</p>
+            <p className="text-lg sm:text-xl">{pageInfo.address}</p>
           </div>
         </div>
 
