@@ -65,3 +65,28 @@ export interface Social extends SanityBody {
   title: string;
   url: string;
 }
+
+export type RuleType = {
+  required: () => RuleType;
+  custom: (cb: CustomRuleCallback) => RuleType;
+  min: (min: number) => RuleType;
+  max: (max: number) => RuleType;
+  length: (exactLength: number) => RuleType;
+  greaterThan: (gt: number) => RuleType;
+  uri: (options: { scheme: string[] }) => RuleType;
+  integer: () => RuleType;
+  precision: (limit: number) => RuleType;
+};
+
+type Validation = (rule: RuleType) => RuleType | RuleType[];
+
+export type CommonFieldProps = {
+  title?: string;
+  fieldset?: string;
+  validation?: Validation;
+  description?: string;
+  hidden?: boolean;
+  readOnly?: boolean;
+  defaultValue?: any;
+  inputComponent?: ElementType;
+};

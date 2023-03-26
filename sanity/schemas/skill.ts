@@ -1,3 +1,5 @@
+import { RuleType } from "../../typings";
+
 export default {
   name: "skill",
   title: "Skill",
@@ -14,7 +16,7 @@ export default {
       title: "Progress",
       type: "number",
       description: "Progress of skill from 0 to 100%",
-      validation: (Rule) => Rule.min(0).max(100),
+      validation: (Rule: RuleType) => Rule.min(0).max(100),
     },
     {
       name: "image",
